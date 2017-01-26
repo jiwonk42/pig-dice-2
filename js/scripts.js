@@ -41,13 +41,21 @@ var player2 = new Player();
 
   });
 
-  // Hold Button
-  $("button#hold-btn").click(function(event) {
+  // Hold 1
+  $("button#hold-btn-1").click(function(event) {
     event.preventDefault();
     player1.holdScore();
     $(".total-score-1").text(player1.totalScore);
     player1.runningTotal = 0;
     $(".current-score-1").text(player1.runningTotal);
+  });
 
+  // Hold 2
+  $("button#hold-btn-2").click(function(event) {
+    event.preventDefault();
+    player2.holdScore();
+    $(".total-score-2").text(player2.totalScore);
+    player2.runningTotal = 0;
+    $(".current-score-2").text(player2.runningTotal);
   });
 });
